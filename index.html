@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MIND TRAP | لعبة الألغاز</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="logo">
+            <div class="logo-icon">🧠</div>
+
+            <div>
+                <strong>MIND TRAP</strong>
+                <span>لا تثق بكل شيء تراه</span>
+            </div>
+        </div>
+
+        <div class="header-buttons">
+
+            <button id="soundBtn" class="icon-btn">
+                🔊
+            </button>
+
+            <button id="themeBtn" class="icon-btn">
+                🌙
+            </button>
+
+            <button id="resetBtn" class="icon-btn">
+                ↻
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- APP -->
+    <main>
+
+        <!-- HOME -->
+        <section id="homeScreen" class="screen active">
+
+            <div class="hero">
+
+                <div class="small-title">
+                    150 مرحلة • ألغاز • خداع • ذكاء
+                </div>
+
+                <h1>
+                    هل أنت أذكى
+                    <span>مما تعتقد؟</span>
+                </h1>
+
+                <p>
+                    لعبة ألغاز مختلفة تمامًا.
+                    لا تثق بالسؤال، لا تثق بالإجابة،
+                    والأهم... لا تثق باللعبة نفسها.
+                </p>
+
+
+                <div class="stats">
+
+                    <div>
+                        <strong id="homeLevel">1</strong>
+                        <span>المرحلة</span>
+                    </div>
+
+                    <div>
+                        <strong id="homeSolved">0</strong>
+                        <span>محلولة</span>
+                    </div>
+
+                    <div>
+                        <strong id="homeStars">0</strong>
+                        <span>النجوم</span>
+                    </div>
+
+                </div>
+
+
+                <button id="startBtn" class="main-btn">
+                    ابدأ اللعب
+                    <span>←</span>
+                </button>
+
+                <button id="levelsBtn" class="secondary-btn">
+                    استعراض المراحل
+                </button>
+
+            </div>
+
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>🧩</span>
+                    <strong>ألغاز متنوعة</strong>
+                    <p>منطق، أرقام، ذاكرة، ملاحظة وخداع.</p>
+                </div>
+
+                <div class="feature">
+                    <span>🎭</span>
+                    <strong>اللعبة تخدعك</strong>
+                    <p>أحيانًا الحل ليس أمامك أصلًا.</p>
+                </div>
+
+                <div class="feature">
+                    <span>🏆</span>
+                    <strong>150 مرحلة</strong>
+                    <p>الصعوبة ترتفع تدريجيًا.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEVELS -->
+        <section id="levelsScreen" class="screen">
+
+            <div class="section-title">
+
+                <button class="back-btn" data-back>
+                    →
+                </button>
+
+                <div>
+                    <small>رحلتك</small>
+                    <h2>اختر المرحلة</h2>
+                </div>
+
+            </div>
+
+            <div id="levelsGrid" class="levels-grid"></div>
+
+        </section>
+
+
+        <!-- GAME -->
+        <section id="gameScreen" class="screen">
+
+            <div class="game-header">
+
+                <button id="gameBack" class="back-btn">
+                    →
+                </button>
+
+                <div class="progress-container">
+
+                    <div class="progress-text">
+                        <span id="levelLabel">
+                            المرحلة 1
+                        </span>
+
+                        <span id="worldLabel">
+                            البداية
+                        </span>
+                    </div>
+
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+
+                </div>
+
+                <div id="hearts" class="hearts">
+                    ♥ ♥ ♥
+                </div>
+
+            </div>
+
+
+            <div id="gameCard" class="game-card">
+
+                <div class="level-info">
+
+                    <span id="difficulty" class="difficulty">
+                        سهل
+                    </span>
+
+                    <span id="typeLabel">
+                        منطق
+                    </span>
+
+                </div>
+
+
+                <div id="puzzleArea"></div>
+
+
+                <div id="hintBox" class="hint-box"></div>
+
+
+                <div class="game-controls">
+
+                    <button id="hintBtn" class="hint-btn">
+                        💡 تلميح
+                        <span id="hintCost">1</span>
+                    </button>
+
+                    <button id="skipBtn" class="skip-btn">
+                        تجاوز
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <div id="modalContent" class="modal-box"></div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+
+    <!-- CONFETTI -->
+    <div id="confetti"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
